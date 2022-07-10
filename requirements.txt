@@ -2,8 +2,10 @@ appdirs==1.4.3
 attrs==19.3.0
 autopep8==1.5
 black==19.10b0
+blinker==1.4
 Click==7.0
 Flask==1.1.1
+Flask-DebugToolbar==0.10.1
 Flask-SQLAlchemy==2.4.1
 itsdangerous==1.1.0
 Jinja2==2.11.0
