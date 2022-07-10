@@ -20,3 +20,16 @@ class Cupcake(db.Model):
     size = db.Column(db.Text, nullable=False)
     rating = db.Column(db.Float, nullable=False)
     image = db.Column(db.Text, nullable=False, default=default_img)
+
+    def serialize(self):
+        """Returns a dictionary representation of the cupcakes in the database"""
+        return {
+            'id': self.id,
+            'flavor': self.flavor,
+            'size': self.size,
+            'rating': self.rating,
+            'image': self.image
+        }
+
+    def __repr__(self):
+        return f"<Cupcake {self.id} flavor={self.flavor} size={self.size} rating={self.rating}"
